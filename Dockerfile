@@ -1,10 +1,10 @@
 #
-# VERSION 0.2
+# VERSION 1.0
 
 FROM    ubuntu
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
 
-ENV SOLR_VERSION 4.6.0
+ENV SOLR_VERSION 4.6.1
 ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt
 ADD http://www.mirrorservice.org/sites/ftp.apache.org/lucene/solr/$SOLR_VERSION/$SOLR.tgz /opt/$SOLR.tgz
