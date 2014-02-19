@@ -1,7 +1,7 @@
 #
 # VERSION 1.1
 
-FROM    jplock/docker-oracle-java7
+FROM    makuk66/docker-oracle-java7
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
 
 ENV SOLR_VERSION 4.6.1
