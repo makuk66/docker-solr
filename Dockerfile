@@ -1,5 +1,3 @@
-#
-# VERSION 1.1
 
 FROM    makuk66/docker-oracle-java7
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
