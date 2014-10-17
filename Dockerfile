@@ -7,6 +7,7 @@ ENV SOLR solr-$SOLR_VERSION
 RUN mkdir -p /opt
 ADD http://www.mirrorservice.org/sites/ftp.apache.org/lucene/solr/$SOLR_VERSION/$SOLR.tgz /opt/$SOLR.tgz
 RUN tar -C /opt --extract --file /opt/$SOLR.tgz
+RUN rm /opt/$SOLR.tgz
 RUN ln -s /opt/$SOLR /opt/solr
 
 EXPOSE 8983
