@@ -7,8 +7,7 @@ This repository triggers the [makuk66/docker-solr](https://index.docker.io/u/mak
 To run:
 
     docker pull makuk66/docker-solr
-    docker run -p 8983:8983 -t makuk66/docker-solr \
-        /bin/bash -c "cd /opt/solr/example; java -jar start.jar"
+    docker run -p 8983:8983 -t makuk66/docker-solr /opt/solr/bin/solr -f
 
 Then go to http://docker1.lan:8983/solr (adjust the hostname for your docker server).
 
