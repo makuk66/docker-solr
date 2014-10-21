@@ -7,12 +7,16 @@ This repository triggers the [makuk66/docker-solr](https://index.docker.io/u/mak
 To run:
 
     docker pull makuk66/docker-solr
-    docker run -p 8983:8983 -t makuk66/docker-solr
+    docker run -it -p 8983:8983 -t makuk66/docker-solr
 
 Then go to http://docker1.lan:8983/solr (adjust the hostname for your docker server).
 
+You can run the SolrCloud example in a single container in the foreground:
 
-You can run SolrCloud too. For example:
+    docker run -it -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
+        /bin/bash -c "/opt/solr/bin/solr -e cloud; echo hit return to quit; read"
+
+You can run SolrCloud in separate containers too. For example:
 
     # pull the ZooKeeper image
     docker pull jplock/zookeeper
