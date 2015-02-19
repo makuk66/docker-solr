@@ -14,7 +14,7 @@ Then go to http://docker1.lan:8983/solr (adjust the hostname for your docker ser
 You can run the SolrCloud example in a single container in the foreground:
 
     docker run -it -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
-        /bin/bash -c "/opt/solr/bin/solr -e cloud; echo hit return to quit; read"
+        /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; echo hit return to quit; read"
 
 You can run SolrCloud in separate containers too. For example:
 
