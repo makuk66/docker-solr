@@ -29,7 +29,7 @@ You can run SolrCloud in separate containers too. For example:
     docker run -link zookeeper:ZK -i -p 8983:8983 -t makuk66/docker-solr \
       /bin/bash -c 'cd /opt/solr/example; java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkHost=$ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT -DnumShards=2 -jar start.jar'
 
-    # in separate sessions, run two more zookeepers
+    # in separate sessions, run two more solr nodes
     docker run -link zookeeper:ZK -i -p 8984:8983 -t makuk66/docker-solr \
     /bin/bash -c 'cd /opt/solr/example; java -DzkHost=$ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT -DnumShards=2 -jar start.jar'
     docker run -link zookeeper:ZK -i -p 8985:8983 -t makuk66/docker-solr \
