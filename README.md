@@ -1,22 +1,30 @@
-Solr on Docker
-==============
+# What is Solr
 
-Run [Solr](http://lucene.apache.org/solr/) on [Docker](https://www.docker.io/).
+Solr is highly reliable, scalable and fault tolerant, providing distributed indexing, replication and load-balanced querying, automated failover and recovery, centralized configuration and more. Solr powers the search and navigation features of many of the world's largest internet sites.
 
-This repository triggers the [makuk66/docker-solr](https://index.docker.io/u/makuk66/docker-solr/) trusted build on the Docker index.
-To run:
+Learn more on [Apache Solr homepage](http://lucene.apache.org/solr/) and the [Apache Solr Reference Guide](https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/).
 
-    docker pull makuk66/docker-solr
+
+# How to use this image
+
+To run a single Solr server:
+
     docker run -it -p 8983:8983 -t makuk66/docker-solr
 
-Then go to http://docker1.lan:8983/solr (adjust the hostname for your docker server).
+Then with a web browser go to http://localhost:8983/solr to see the Admin Console (adjust the hostname for your docker host).
 
-You can run the SolrCloud example in a single container in the foreground:
+
+## Single-container SolrCloud
+
+To simulate a distributed Solr configuration ("SolrCloud" mode) in a single container, run the "cloud" example:
 
     docker run -it -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
         /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; echo hit return to quit; read"
 
-You can run SolrCloud in separate containers too. For example:
+
+## Distributed Solr
+
+You can also run a distributed Solr configuration, with Solr nodes in separate containers, sharing a single ZooKeeper server:
 
     # pull the ZooKeeper image
     docker pull jplock/zookeeper
@@ -35,5 +43,9 @@ You can run SolrCloud in separate containers too. For example:
     docker run -link zookeeper:ZK -i -p 8985:8983 -t makuk66/docker-solr \
     /bin/bash -c 'cd /opt/solr/example; java -DzkHost=$ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT -DnumShards=2 -jar start.jar'
 
+Then go to http://localhost:8983/solr/#/~cloud (adjust the hostname for your docker host) to see the two shards and three Solr nodes.
 
-Then go to http://docker1.lan:8983/solr/#/~cloud (adjust the hostname for your docker server) to see the two shards and three Solr nodes.
+
+# About this repository
+
+The Dockerfile for this repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr/blob/master/Dockerfile), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
