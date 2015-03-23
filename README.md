@@ -1,11 +1,17 @@
+# Supported tags and respective `Dockerfile` links
 
-![Solr Logo](https://github.com/makuk66/docker-solr/blob/master/logo.png)
+-	[`4.10.4`, `4.10`, `4` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/4.10/Dockerfile)
+-	[`5.0.0`, `5.0`, `5`, `latest` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/5.0/Dockerfile)
+
 
 # What is Solr?
 Solr is highly reliable, scalable and fault tolerant, providing distributed indexing, replication and load-balanced querying, automated failover and recovery, centralized configuration and more. Solr powers the search and navigation features of many of the world's largest internet sites.
 
 Learn more on [Apache Solr homepage](http://lucene.apache.org/solr/) and in the [Apache Solr Reference Guide](https://www.apache.org/dyn/closer.cgi/lucene/solr/ref-guide/).
 
+> [wikipedia.org/wiki/](https://en.wikipedia.org/wiki/Apache_Solr)
+
+![Solr Logo](https://github.com/makuk66/docker-solr/blob/master/logo.png)
 
 # How to use this Docker image
 
@@ -50,14 +56,6 @@ Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your d
 # About this repository
 
 This repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
-
-## Supported tags
-
-This README describes the latest version, available under he `latest` tag, with [this Dockerfile](https://github.com/makuk66/docker-solr/blob/master/5.0/Dockerfile).
-
-Other tags:
-
-4.10.4 ([Dockerfile](https://github.com/makuk66/docker-solr/blob/master/4.10/Dockerfile). Use the [old instructions](https://github.com/makuk66/docker-solr/tree/151e7f03b97d61d9ce4f701f9d8f92d183eb4831))
 
 ## Supported Docker versions
 
