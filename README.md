@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`4.10.4`, `4.10`, `4` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/4.10/Dockerfile)
--	[`5.0.0`, `5.0`, `5`, `latest` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/5.0/Dockerfile)
+-	[`5.0.0`, `5.0`, `5`, `latest` (*5.0/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/5.0/Dockerfile)
 
 
 # What is Solr?
