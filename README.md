@@ -23,7 +23,7 @@ To simulate a distributed Solr configuration ("SolrCloud" mode) in a single cont
     docker run -d -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
         /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; while true ; do sleep 3600; done"
 
-This will take a minute or so to start. You can follow along with `docker logs -f <your_container_id>`.
+This will take a minute or so to start. You can follow along with `docker logs -f CONTAINER`.
 
 ## Distributed Solr
 
