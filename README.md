@@ -39,7 +39,7 @@ Run ZooKeeper, and define a name so we can link to it:
 
     docker run --name zookeeper -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
 
-Run two solr nodes, linked to the zookeeper container:
+Run two Solr nodes, linked to the zookeeper container:
 
     docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 makuk66/docker-solr \
       bash -c '/opt/solr/bin/solr start -f -z $ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT'
