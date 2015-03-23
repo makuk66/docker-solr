@@ -13,7 +13,7 @@ To run a single Solr server:
 
     docker run -d -p 8983:8983 -t makuk66/docker-solr
 
-Then with a web browser go to http://localhost:8983/solr to see the Admin Console (adjust the hostname for your docker host).
+Then with a web browser go to `http://localhost:8983/solr` to see the Admin Console (adjust the hostname for your docker host).
 
 
 ## Single-container SolrCloud
@@ -41,7 +41,7 @@ You can also run a distributed Solr configuration, with Solr nodes in separate c
     # create a collection
     docker exec -i -t solr1 /opt/solr/bin/solr create_collection -c collection1 -shards 2 -p 8983
 
-Then go to http://localhost:8983/solr/#/~cloud (adjust the hostname for your docker host) to see the two shards and Solr nodes.
+Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your docker host) to see the two shards and Solr nodes.
 
 # About this repository
 
