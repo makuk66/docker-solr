@@ -14,4 +14,5 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
   ln -s /opt/$SOLR /opt/solr
 
 EXPOSE 8983
+WORKDIR /opt/solr
 CMD ["/bin/bash", "-c", "/opt/solr/bin/solr -f"]
