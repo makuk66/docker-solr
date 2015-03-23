@@ -53,11 +53,11 @@ This repository is available on [github.com/makuk66/docker-solr](https://github.
 
 ## Supported tags
 
-This README describes the latest version, available under he `latest` tag, with [this Dockerfile](https://github.com/makuk66/docker-solr/blob/master/Dockerfile).
+This README describes the latest version, available under he `latest` tag, with [this Dockerfile](https://github.com/makuk66/docker-solr/blob/master/5.0/Dockerfile).
 
 Other tags:
 
-4.10.3 ([Dockerfile](https://github.com/makuk66/docker-solr/blob/151e7f03b97d61d9ce4f701f9d8f92d183eb4831/Dockerfile). Use the [old instructions](https://github.com/makuk66/docker-solr/tree/151e7f03b97d61d9ce4f701f9d8f92d183eb4831))
+4.10.4 ([Dockerfile](https://github.com/makuk66/docker-solr/blob/master/4.10/Dockerfile). Use the [old instructions](https://github.com/makuk66/docker-solr/tree/151e7f03b97d61d9ce4f701f9d8f92d183eb4831))
 
 ## Supported Docker versions
 
