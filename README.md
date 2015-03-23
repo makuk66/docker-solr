@@ -48,9 +48,17 @@ Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your d
 
 # About this repository
 
-The Dockerfile for this repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr/blob/master/Dockerfile), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
+This repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
 
-# Supported Docker versions
+## Supported tags
+
+This README describes the latest version, available under he `latest` tag, with [this Dockerfile](https://github.com/makuk66/docker-solr/blob/master/Dockerfile).
+
+Other tags:
+
+4.10.3 ([Dockerfile](https://github.com/makuk66/docker-solr/blob/151e7f03b97d61d9ce4f701f9d8f92d183eb4831/Dockerfile). Use the [old instructions](https://github.com/makuk66/docker-solr/tree/151e7f03b97d61d9ce4f701f9d8f92d183eb4831))
+
+## Supported Docker versions
 
 This image has been tested with Docker version 1.5.0.
 
