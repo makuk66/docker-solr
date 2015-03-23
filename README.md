@@ -43,10 +43,6 @@ You can also run a distributed Solr configuration, with Solr nodes in separate c
 
 Then go to http://localhost:8983/solr/#/~cloud (adjust the hostname for your docker host) to see the two shards and Solr nodes.
 
-# License
-
-Solr is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), and this repository is too.
-
 # About this repository
 
 The Dockerfile for this repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr/blob/master/Dockerfile), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
@@ -66,3 +62,21 @@ If you have any problems with or questions about this image, please submit a [Gi
 If you have have a contribution for this repository, please send a pull request.
 
 If you want to contribute to Solr, see the [Solr Resources](http://lucene.apache.org/solr/resources.html).
+
+# License
+
+Solr is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), and this repository is too:
+
+Copyright 2015 Martijn Koster
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
