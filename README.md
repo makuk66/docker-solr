@@ -20,9 +20,10 @@ Then with a web browser go to `http://localhost:8983/solr` to see the Admin Cons
 
 To simulate a distributed Solr configuration ("SolrCloud" mode) in a single container, run the "cloud" example:
 
-    docker run -it -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
-        /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; echo hit return to quit; read"
+    docker run -d -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
+        /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; while true ; do sleep 3600; done"
 
+This will take a minute or so to start. You can follow along with `docker logs -f <your_container_id>`.
 
 ## Distributed Solr
 
