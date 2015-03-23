@@ -28,17 +28,20 @@ To simulate a distributed Solr configuration ("SolrCloud" mode) in a single cont
 
 You can also run a distributed Solr configuration, with Solr nodes in separate containers, sharing a single ZooKeeper server:
 
-    # run ZooKeeper, and define a name so we can link to it
+Run ZooKeeper, and define a name so we can link to it:
+
     docker run --name zookeeper -d -p 2181:2181 -p 2888:2888 -p 3888:3888 jplock/zookeeper
 
-    # run two solr nodes, linked to the zookeeper container
+Run two solr nodes, linked to the zookeeper container:
+
     docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 makuk66/docker-solr \
       bash -c '/opt/solr/bin/solr start -f -z $ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT'
 
     docker run --name solr2 --link zookeeper:ZK -d -p 8984:8983 makuk66/docker-solr \
       bash -c '/opt/solr/bin/solr start -f -z $ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT'
 
-    # create a collection
+Create a collection:
+
     docker exec -i -t solr1 /opt/solr/bin/solr create_collection -c collection1 -shards 2 -p 8983
 
 Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your docker host) to see the two shards and Solr nodes.
