@@ -41,10 +41,12 @@ Run ZooKeeper, and define a name so we can link to it:
 
 Run two Solr nodes, linked to the zookeeper container:
 
-    docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 makuk66/docker-solr \
+    docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 \
+      makuk66/docker-solr \
       bash -c '/opt/solr/bin/solr start -f -z $ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT'
 
-    docker run --name solr2 --link zookeeper:ZK -d -p 8984:8983 makuk66/docker-solr \
+    docker run --name solr2 --link zookeeper:ZK -d -p 8984:8983 \
+      makuk66/docker-solr \
       bash -c '/opt/solr/bin/solr start -f -z $ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT'
 
 Create a collection:
