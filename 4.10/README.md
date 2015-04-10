@@ -21,12 +21,14 @@ Run ZooKeeper, and define a name so we can link to it:
 
 Run the first Solr node, linked to the zookeeper container, and configured to boostrap its configuration:
 
-    docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 makuk66/docker-solr:4.10.4 \
+    docker run --name solr1 --link zookeeper:ZK -d -p 8983:8983 \
+      makuk66/docker-solr:4.10.4 \
       bash -c 'cd /opt/solr/example; java -Dbootstrap_confdir=./solr/collection1/conf -Dcollection.configName=myconf -DzkHost=$ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT -DnumShards=2 -jar start.jar'
 
 Then run the second Solr node:
 
-    docker run --name solr2 --link zookeeper:ZK -d -p 8984:8983 makuk66/docker-solr4.10.4 \
+    docker run --name solr2 --link zookeeper:ZK -d -p 8984:8983 \
+      makuk66/docker-solr4.10.4 \
       bash -c 'cd /opt/solr/example; java -DzkHost=$ZK_PORT_2181_TCP_ADDR:$ZK_PORT_2181_TCP_PORT -DnumShards=2 -jar start.jar'
 
 Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your docker host) to see the two shards and Solr nodes.
