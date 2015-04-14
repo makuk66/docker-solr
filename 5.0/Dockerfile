@@ -12,8 +12,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     curl \
     lsof \
     procps && \
-  groupadd -r $SOLR_USER && \
-  useradd -r -g $SOLR_USER $SOLR_USER && \
+  groupadd -r $SOLR_USER -g 1000 && \
+  useradd -r -g $SOLR_USER -u 1000  $SOLR_USER && \
   mkdir -p /opt && \
   wget -nv --output-document=/opt/$SOLR.tgz http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/$SOLR.tgz && \
   tar -C /opt --extract --file /opt/$SOLR.tgz && \
