@@ -11,7 +11,7 @@ Learn more on [Apache Solr homepage](http://lucene.apache.org/solr/) and in the 
 
 > [wikipedia.org/wiki/Apache_Solr](https://en.wikipedia.org/wiki/Apache_Solr)
 
-![Solr Logo](https://github.com/makuk66/docker-solr/blob/master/logo.png)
+![Solr Logo](https://raw.githubusercontent.com/makuk66/docker-solr/master/logo.png)
 
 # How to use this Docker image
 
