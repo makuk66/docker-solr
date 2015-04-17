@@ -24,7 +24,7 @@ Then with a web browser go to `http://localhost:8983/` to see the Admin Console 
 
 ## Single-container SolrCloud
 
-To simulate a distributed Solr configuration ("SolrCloud" mode) in a single container, run the "cloud" example:
+To simulate a distributed Solr configuration ("SolrCloud" mode) on a single container with 2 nodes in separate JVMs, run the "cloud" example:
 
     docker run -d -p 8983:8983 -p 7574:7574 makuk66/docker-solr \
         /bin/bash -c "/opt/solr/bin/solr -e cloud -noprompt; while true ; do sleep 3600; done"
@@ -51,7 +51,8 @@ Run two Solr nodes, linked to the zookeeper container:
 
 Create a collection:
 
-    docker exec -i -t solr1 /opt/solr/bin/solr create_collection -c collection1 -shards 2 -p 8983
+    docker exec -i -t solr1 /opt/solr/bin/solr create_collection \
+        -c collection1 -shards 2 -p 8983
 
 Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your docker host) to see the two shards and Solr nodes.
 
