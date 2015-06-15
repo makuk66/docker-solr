@@ -2,7 +2,7 @@
 FROM    java:8
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
 
-ENV SOLR_VERSION 5.2.0
+ENV SOLR_VERSION 5.2.1
 ENV SOLR solr-$SOLR_VERSION
 ENV SOLR_USER solr
 
