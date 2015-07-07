@@ -34,7 +34,7 @@ In the UI, find the "Core selector" popup menu and select the "gettingstarted" c
 menu item. This gives you a default search for "*:*" which returns all docs. Hit the "Execute Query" button,
 and you should see a few docs with film data. Congratulations!
 
-To learn more about Solr, see the [Getting Started Guide](https://cwiki.apache.org/confluence/display/solr/Getting+Started).
+To learn more about Solr, see the [Apache Solr Reference Guide](https://cwiki.apache.org/confluence/display/solr/Apache+Solr+Reference+Guide).
 
 ## Single-container SolrCloud
 
