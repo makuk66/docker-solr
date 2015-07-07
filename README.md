@@ -16,10 +16,25 @@ Learn more on [Apache Solr homepage](http://lucene.apache.org/solr/) and in the 
 
 To run a single Solr server:
 
-    docker run -d -p 8983:8983 -t makuk66/docker-solr
+    SOLR_CONTAINER=(docker run -d -p 8983:8983 -t makuk66/docker-solr)
 
 Then with a web browser go to `http://localhost:8983/` to see the Admin Console (adjust the hostname for your docker host).
 
+To use Solr, you need to create a "core", an index for your data. For example:
+
+    docker exec -it --user=solr "$SOLR_CONTAINER" bin/solr create_core -c gettingstarted
+
+In the web UI if you click on "Core Admin" you should now see the "gettingstarted" core.
+
+If you want to load some example data:
+
+    docker exec -it --user=solr $SOLR_CONTAINER bin/post -c gettingstarted example/films/films.json
+
+In the UI, find the "Core selector" popup menu and select the "gettingstarted" core, then select the "Query"
+menu item. This gives you a default search for "*:*" which returns all docs. Hit the "Execute Query" button,
+and you should see a few docs with film data. Congratulations!
+
+To learn more about Solr, see the [Getting Started Guide](https://cwiki.apache.org/confluence/display/solr/Getting+Started).
 
 ## Single-container SolrCloud
 
