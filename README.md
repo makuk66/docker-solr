@@ -16,7 +16,7 @@ Learn more on [Apache Solr homepage](http://lucene.apache.org/solr/) and in the 
 
 To run a single Solr server:
 
-    SOLR_CONTAINER=(docker run -d -p 8983:8983 -t makuk66/docker-solr)
+    SOLR_CONTAINER=$(docker run -d -p 8983:8983 -t makuk66/docker-solr)
 
 Then with a web browser go to `http://localhost:8983/` to see the Admin Console (adjust the hostname for your docker host).
 
