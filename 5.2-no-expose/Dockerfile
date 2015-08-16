@@ -1,5 +1,5 @@
 
-FROM    java:8
+FROM    java/openjdk-8-jre
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
 
 ENV SOLR_VERSION 5.2.1
@@ -8,10 +8,7 @@ ENV SOLR_USER solr
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
   apt-get update && \
-  apt-get -y install \
-    curl \
-    lsof \
-    procps && \
+  apt-get -y install lsof && \
   groupadd -r $SOLR_USER && \
   useradd -r -g $SOLR_USER $SOLR_USER && \
   mkdir -p /opt && \
