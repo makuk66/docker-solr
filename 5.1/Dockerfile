@@ -1,5 +1,5 @@
 
-FROM    java/openjdk-8-jre
+FROM    java:openjdk-8-jre
 MAINTAINER  Martijn Koster "mak-docker@greenhills.co.uk"
 
 ENV SOLR_VERSION 5.1.0
