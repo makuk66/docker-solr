@@ -16,6 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
   tar -C /opt --extract --file /opt/$SOLR.tgz && \
   rm /opt/$SOLR.tgz && \
   ln -s /opt/$SOLR /opt/solr && \
+  mkdir -p /opt/solr/server/solr/lib && \
   chown -R $SOLR_USER:$SOLR_USER /opt/solr /opt/$SOLR
 
 EXPOSE 8983
