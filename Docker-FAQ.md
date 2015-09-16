@@ -14,7 +14,7 @@ Equally, if you `docker commit` your container, you can later create a new
 container from that image, and that will have your data in it.
 
 But usually when people ask this question, what they are after is a way
-to store Solr data and config in a separate [Docker Volume|https://docs.docker.com/userguide/dockervolumes/].
+to store Solr data and config in a separate [Docker Volume](https://docs.docker.com/userguide/dockervolumes/).
 That is explained in the next two questions.
 
 
