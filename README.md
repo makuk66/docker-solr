@@ -72,7 +72,7 @@ Then go to `http://localhost:8983/solr/#/~cloud` (adjust the hostname for your d
 
 # About this repository
 
-This repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr), and the automated build is on the [Docker Registry](https://registry.hub.docker.com/u/makuk66/docker-solr/).
+This repository is available on [github.com/makuk66/docker-solr](https://github.com/makuk66/docker-solr), and the automated build is on the [Docker Hub](https://hub.docker.com/r/makuk66/docker-solr/).
 
 ## Supported Docker versions
 
