@@ -76,7 +76,7 @@ This repository is available on [github.com/makuk66/docker-solr](https://github.
 
 ## Supported Docker versions
 
-This image has been tested with Docker version 1.5.0.
+This image has been tested with Docker version 1.8.1.
 
 # User Feedback
 
