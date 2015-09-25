@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`4.10.4`, `4.10`, `4` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/4.10/Dockerfile)
--	[`5.3.0`, `5.3`, `5`, `latest` (*5.3/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/master/5.3/Dockerfile)
+-	[`5.3.1`, `5.3`, `5`, `latest` (*5.3/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/b566e7ba1bcec731bcb7d845ee77a00f28e87115/5.3/Dockerfile)
 
 # What is Solr?
 Solr is highly reliable, scalable and fault tolerant, providing distributed indexing, replication and load-balanced querying, automated failover and recovery, centralized configuration and more. Solr powers the search and navigation features of many of the world's largest internet sites.
