@@ -1,3 +1,10 @@
+# News
+
+This `makuk66/docker-solr` image has been superseded by [this official solr image](https://hub.docker.com/_/solr/).
+Please use that instead, and add a Star!
+
+The `makuk66/docker-solr` image will be maintained in parallel for a little while, but will not gain new versions from 6.x.
+
 # Supported tags and respective `Dockerfile` links
 
 -	[`4.10.4`, `4.10`, `4` (*4.10/Dockerfile*)](https://github.com/makuk66/docker-solr/blob/05ba189924dd98ec1a5ea2c921b5f9ef0f474f6c/4.10/Dockerfile)
